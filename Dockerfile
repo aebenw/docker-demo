@@ -10,5 +10,6 @@ CMD ["npm", "run", "build"]
 # FOR RUNNING
 FROM nginx
 # we can now reference builder, and the build folder created by it
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # the last part of the copy tag is specific to nginx and where it lives
