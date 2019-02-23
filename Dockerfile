@@ -2,7 +2,7 @@
 FROM node:alpine as builder
 # 'as' is a reference, everything done here can be refered to as builder
 WORKDIR '/app'
-COPY ./package*.json ./
+COPY package*.json ./
 RUN npm install
 COPY . .
 CMD ["npm", "run", "build"]
